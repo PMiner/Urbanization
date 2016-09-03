@@ -1,0 +1,23 @@
+{
+    "textures": {
+        "particle": "urbanization:blocks/go_sign",
+        "0": "blocks/iron_block",
+        "1": "urbanization:blocks/go_sign",
+        "2": "blocks/iron_block"
+    },
+    "elements": [
+        {
+            "name": "Sign",
+            "from": [ 7.0, 0.0, 0.0 ], 
+            "to": [ 9.0, 16.0, 16.0 ], 
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 1.0, 16.0 ] },
+                "east": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "south": { "texture": "#0", "uv": [ 0.0, 0.0, 1.0, 16.0 ] },
+                "west": { "texture": "#1", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "up": { "texture": "#2", "uv": [ 0.0, 0.0, 1.0, 16.0 ] },
+                "down": { "texture": "#2", "uv": [ 0.0, 0.0, 1.0, 16.0 ] }
+            }
+        }
+    ]
+}

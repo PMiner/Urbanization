@@ -1,0 +1,16 @@
+[
+{
+  "modid": "urbanization",
+  "name": "Urbanization",
+  "description": "This mod adds Cities to minecraft! Expand your world with new types of powergen, roads, factories, cars and much more!",
+  "version": "1.2",
+  "mcversion": "1.8.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["PMiner"],
+  "credits": "PMiner carefully wrote this mod from scratch. Your welcome! :D",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
