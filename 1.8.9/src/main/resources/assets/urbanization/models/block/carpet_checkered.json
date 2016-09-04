@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "urbanization:blocks/wool_checkered",
+        "wool": "urbanization:blocks/wool_checkered"
+    }
+}

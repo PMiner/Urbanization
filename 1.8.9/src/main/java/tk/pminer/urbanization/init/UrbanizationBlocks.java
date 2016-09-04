@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import tk.pminer.urbanization.Reference;
 import tk.pminer.urbanization.Urbanization;
+import tk.pminer.urbanization.blocks.BlockCarpetPattern;
 import tk.pminer.urbanization.blocks.BlockCeilingFan1;
 import tk.pminer.urbanization.blocks.BlockConcreteRoad;
 import tk.pminer.urbanization.blocks.BlockConcreteRoadStriped1;
@@ -21,6 +22,7 @@ import tk.pminer.urbanization.blocks.BlockTomato;
 
 public class UrbanizationBlocks
 {
+	public static Block carpet_checkered;
 	public static Block pineapple_1;
 	public static Block lettuce_1;
 	public static Block tomato_1;
@@ -58,6 +60,7 @@ public class UrbanizationBlocks
 
 	public static void registerRenders()
 	{
+		registerRender(carpet_checkered);
 		registerRender(pineapple_1);
 		registerRender(lettuce_1);
 		registerRender(tomato_1);
@@ -100,6 +103,7 @@ public class UrbanizationBlocks
 
 	public static void init()
 	{
+		carpet_checkered = new BlockCarpetPattern(Material.cloth).setUnlocalizedName("carpet_checkered").setCreativeTab(Urbanization.tabUrbanization);
 		pineapple_1 = new BlockPineapple(Material.plants).setUnlocalizedName("pineapple_1").setCreativeTab(Urbanization.tabUrbanization);
 		lettuce_1 = new BlockLettuce(Material.plants).setUnlocalizedName("lettuce_1").setCreativeTab(Urbanization.tabUrbanization);
 		tomato_1 = new BlockTomato(Material.plants).setUnlocalizedName("tomato_1").setCreativeTab(Urbanization.tabUrbanization);
@@ -142,6 +146,7 @@ public class UrbanizationBlocks
 
 	public static void register()
 	{
+		GameRegistry.registerBlock(carpet_checkered, carpet_checkered.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(pineapple_1, pineapple_1.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lettuce_1, lettuce_1.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(tomato_1, tomato_1.getUnlocalizedName().substring(5));
