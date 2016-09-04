@@ -103,7 +103,7 @@ public class UrbanizationBlocks
 
 	public static void init()
 	{
-		carpet_checkered = new BlockCarpetPattern(Material.cloth).setUnlocalizedName("carpet_checkered").setCreativeTab(Urbanization.tabUrbanization);
+		carpet_checkered = new BlockCarpetPattern(Material.carpet).setUnlocalizedName("carpet_checkered").setCreativeTab(Urbanization.tabUrbanization);
 		pineapple_1 = new BlockPineapple(Material.plants).setUnlocalizedName("pineapple_1").setCreativeTab(Urbanization.tabUrbanization);
 		lettuce_1 = new BlockLettuce(Material.plants).setUnlocalizedName("lettuce_1").setCreativeTab(Urbanization.tabUrbanization);
 		tomato_1 = new BlockTomato(Material.plants).setUnlocalizedName("tomato_1").setCreativeTab(Urbanization.tabUrbanization);

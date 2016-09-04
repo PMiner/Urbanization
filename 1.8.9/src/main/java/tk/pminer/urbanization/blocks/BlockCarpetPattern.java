@@ -14,6 +14,7 @@ public class BlockCarpetPattern extends Block
 	{
 		super(materialIn);
 		setHardness(2.0F);
+		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.0625F, 1.0F);
 		setStepSound(Block.soundTypeCloth);
 	}
 	@Override
@@ -32,13 +33,13 @@ public class BlockCarpetPattern extends Block
 		return false;
 	}
 	@Override
-	public void setBlockBoundsBasedOnState(IBlockAccess worldIn, BlockPos pos) 
-	{
-		setBlockBounds(0.0F, 0.06F, 0.0F, 1.0F, 0.0F, 1.0F);
-	}
-	@Override
 	public boolean isFlammable(IBlockAccess world, BlockPos pos, EnumFacing face) 
 	{
 		return true;
+	}
+	@Override
+	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) 
+	{
+		return 150;
 	}
 }
