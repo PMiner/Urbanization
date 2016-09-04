@@ -23,6 +23,8 @@ import tk.pminer.urbanization.blocks.BlockTomato;
 public class UrbanizationBlocks
 {
 	public static Block carpet_checkered;
+	public static Block carpet_striped;
+	public static Block carpet_chevron;
 	public static Block pineapple_1;
 	public static Block lettuce_1;
 	public static Block tomato_1;
@@ -61,6 +63,8 @@ public class UrbanizationBlocks
 	public static void registerRenders()
 	{
 		registerRender(carpet_checkered);
+		registerRender(carpet_striped);
+		registerRender(carpet_chevron);
 		registerRender(pineapple_1);
 		registerRender(lettuce_1);
 		registerRender(tomato_1);
@@ -103,7 +107,9 @@ public class UrbanizationBlocks
 
 	public static void init()
 	{
+		carpet_striped = new BlockCarpetPattern(Material.carpet).setUnlocalizedName("carpet_striped").setCreativeTab(Urbanization.tabUrbanization);
 		carpet_checkered = new BlockCarpetPattern(Material.carpet).setUnlocalizedName("carpet_checkered").setCreativeTab(Urbanization.tabUrbanization);
+		carpet_chevron = new BlockCarpetPattern(Material.carpet).setUnlocalizedName("carpet_chevron").setCreativeTab(Urbanization.tabUrbanization);
 		pineapple_1 = new BlockPineapple(Material.plants).setUnlocalizedName("pineapple_1").setCreativeTab(Urbanization.tabUrbanization);
 		lettuce_1 = new BlockLettuce(Material.plants).setUnlocalizedName("lettuce_1").setCreativeTab(Urbanization.tabUrbanization);
 		tomato_1 = new BlockTomato(Material.plants).setUnlocalizedName("tomato_1").setCreativeTab(Urbanization.tabUrbanization);
@@ -146,7 +152,9 @@ public class UrbanizationBlocks
 
 	public static void register()
 	{
+		GameRegistry.registerBlock(carpet_striped, carpet_striped.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(carpet_checkered, carpet_checkered.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(carpet_chevron, carpet_chevron.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(pineapple_1, pineapple_1.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(lettuce_1, lettuce_1.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(tomato_1, tomato_1.getUnlocalizedName().substring(5));

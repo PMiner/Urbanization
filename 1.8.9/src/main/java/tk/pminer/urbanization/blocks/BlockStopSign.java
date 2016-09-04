@@ -80,4 +80,9 @@ public class BlockStopSign extends Block
 	{
 		return new ItemStack(Item.getItemFromBlock(UrbanizationBlocks.stop_sign_item));
 	}
+	@Override
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) 
+	{
+		return false;
+	}
 }

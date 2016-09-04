@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
+import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import tk.pminer.urbanization.init.UrbanizationBlocks;
@@ -73,6 +74,16 @@ public class BlockGoSign extends Block
 				}
 			}
 		}
+		return false;
+	}
+	@Override
+	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) 
+	{
+		return new ItemStack(Item.getItemFromBlock(UrbanizationBlocks.go_sign_item));
+	}
+	@Override
+	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) 
+	{
 		return false;
 	}
 }
