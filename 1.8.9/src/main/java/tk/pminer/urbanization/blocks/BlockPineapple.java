@@ -149,9 +149,31 @@ public class BlockPineapple extends Block
 			{
 				if(playerItem == UrbanizationItems.fertilizer)
 				{
-					if(playerIn.inventory.addItemStackToInventory(new ItemStack(UrbanizationItems.sack)))
+					if(!playerIn.capabilities.isCreativeMode)
 					{
-						playerStack.stackSize--;
+						if(playerIn.inventory.addItemStackToInventory(new ItemStack(UrbanizationItems.sack)))
+						{
+							playerStack.stackSize--;
+							if (worldIn.getBlockState(pos) == UrbanizationBlocks.pineapple_1.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.pineapple_2.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.pineapple_2.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.pineapple_3.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.pineapple_3.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.pineapple_4.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.pineapple_4.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.pineapple_5.getDefaultState());
+							}
+						}
+					}
+					else if(playerIn.capabilities.isCreativeMode)
+					{
 						if (worldIn.getBlockState(pos) == UrbanizationBlocks.pineapple_1.getDefaultState())
 						{
 							worldIn.setBlockState(pos, UrbanizationBlocks.pineapple_2.getDefaultState());

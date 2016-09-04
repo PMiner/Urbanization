@@ -146,24 +146,46 @@ public class BlockLettuce extends Block
 			{
 				if(playerItem == UrbanizationItems.fertilizer)
 				{
-					if(playerIn.inventory.addItemStackToInventory(new ItemStack(UrbanizationItems.sack)))
+					if(!playerIn.capabilities.isCreativeMode)
 					{
-						playerStack.stackSize--;
-						if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_1.getDefaultState())
+						if(playerIn.inventory.addItemStackToInventory(new ItemStack(UrbanizationItems.sack)))
 						{
-							worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_2.getDefaultState());
+							playerStack.stackSize--;
+							if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_1.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_2.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_2.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_3.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_3.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_4.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_4.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_5.getDefaultState());
+							}
 						}
-						else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_2.getDefaultState())
+						else if(playerIn.capabilities.isCreativeMode)
 						{
-							worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_3.getDefaultState());
-						}
-						else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_3.getDefaultState())
-						{
-							worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_4.getDefaultState());
-						}
-						else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_4.getDefaultState())
-						{
-							worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_5.getDefaultState());
+							if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_1.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_2.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_2.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_3.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_3.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_4.getDefaultState());
+							}
+							else if (worldIn.getBlockState(pos) == UrbanizationBlocks.lettuce_4.getDefaultState())
+							{
+								worldIn.setBlockState(pos, UrbanizationBlocks.lettuce_5.getDefaultState());
+							}
 						}
 					}
 				}

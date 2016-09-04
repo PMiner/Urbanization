@@ -1,7 +1,21 @@
 {
-    "parent": "block/carpet",
     "textures": {
         "particle": "urbanization:blocks/wool_checkered",
-        "wool": "urbanization:blocks/wool_checkered"
-    }
+        "0": "urbanization:blocks/wool_checkered"
+    },
+    "elements": [
+        {
+            "name": "Carpet",
+            "from": [ 0.0, 0.0, 0.0 ], 
+            "to": [ 16, 1, 16 ], 
+            "faces": {
+                "north": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 0.1 ], "rotation": 180 },
+                "east": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 0.1 ] },
+                "south": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 0.1 ], "rotation": 180 },
+                "west": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 0.1 ] },
+                "up": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+                "down": { "texture": "#0", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "rotation": 90 }
+            }
+        }
+    ]
 }
