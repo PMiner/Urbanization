@@ -6,10 +6,13 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import tk.pminer.urbanization.Urbanization;
+import tk.pminer.urbanization.init.UrbanizationBlocks;
 
 public class BlockCarpetPattern extends Block
 {
@@ -48,9 +51,13 @@ public class BlockCarpetPattern extends Block
 	@Override
 	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) 
 	{
-		if(!(worldIn.getBlockState(pos) == Blocks.air.getDefaultState()))
+		if((worldIn.getBlockState(pos.down()) == Blocks.air.getDefaultState()))
 		{
 			worldIn.destroyBlock(pos, true);
+			if(worldIn.getBlockState(pos.up()) == UrbanizationBlocks.carpet_checkered.getDefaultState())
+			{
+				worldIn.destroyBlock(pos.up(), true);
+			}
 		}
 	}
 }
