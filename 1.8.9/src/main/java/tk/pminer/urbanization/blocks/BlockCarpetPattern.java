@@ -3,10 +3,13 @@ package tk.pminer.urbanization.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCarpet;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumWorldBlockLayer;
 import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
 
 public class BlockCarpetPattern extends Block
 {
@@ -41,5 +44,13 @@ public class BlockCarpetPattern extends Block
 	public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) 
 	{
 		return 150;
+	}
+	@Override
+	public void onNeighborBlockChange(World worldIn, BlockPos pos, IBlockState state, Block neighborBlock) 
+	{
+		if(!(worldIn.getBlockState(pos) == Blocks.air.getDefaultState()))
+		{
+			worldIn.destroyBlock(pos, true);
+		}
 	}
 }
