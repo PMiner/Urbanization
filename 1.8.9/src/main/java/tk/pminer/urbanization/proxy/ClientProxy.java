@@ -6,16 +6,15 @@ import tk.pminer.urbanization.init.UrbanizationItems;
 
 public class ClientProxy extends CommonProxy
 {
-  public ClientProxy() {}
-  
-  public void registerRenders()
-  {
-    tk.pminer.urbanization.init.UrbanizationBlocks.registerRenders();
-    UrbanizationItems.registerRenders();
-  }
-  
-  public void openHelpGuideGui()
-  {
-    Minecraft.getMinecraft().displayGuiScreen(new GuiHelpGuide());
-  }
+	@Override
+	public void registerRenders()
+	{
+		tk.pminer.urbanization.init.UrbanizationBlocks.registerRenders();
+		UrbanizationItems.registerRenders();
+	}
+	@Override
+	public void openHelpGuideGui()
+	{
+		Minecraft.getMinecraft().displayGuiScreen(new GuiHelpGuide());
+	}
 }

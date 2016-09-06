@@ -45,9 +45,6 @@ public class UrbanizationItems
   public static Item hand_blender;
   public static Item singularity;
   public static Item help_guide;
-  
-  public UrbanizationItems() {}
-  
   public static void init()
   {
     cheese_patty = new ItemFood(4, 0.7F, false).setUnlocalizedName("cheese_patty").setCreativeTab(Urbanization.tabUrbanization);
