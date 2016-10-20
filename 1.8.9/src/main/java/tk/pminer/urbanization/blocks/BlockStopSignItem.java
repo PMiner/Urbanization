@@ -18,11 +18,11 @@ public class BlockStopSignItem extends Block
 	@Override
 	public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) 
 	{
-		if(facing == EnumFacing.WEST||facing == EnumFacing.EAST)
+		if(placer.getHorizontalFacing() == EnumFacing.WEST||facing == EnumFacing.EAST)
 		{
 			worldIn.setBlockState(pos.up(), UrbanizationBlocks.stop_sign_2.getDefaultState());
 		}
-		else if(facing == EnumFacing.NORTH||facing == EnumFacing.SOUTH)
+		else if(placer.getHorizontalFacing() == EnumFacing.NORTH||facing == EnumFacing.SOUTH)
 		{
 			worldIn.setBlockState(pos.up(), UrbanizationBlocks.stop_sign_1.getDefaultState());
 		}

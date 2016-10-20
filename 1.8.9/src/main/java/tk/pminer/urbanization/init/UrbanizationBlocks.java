@@ -58,8 +58,6 @@ public class UrbanizationBlocks
 	public static Block go_sign_2;
 	public static Block stop_sign_2;
 
-	public UrbanizationBlocks() {}
-
 	public static void registerRenders()
 	{
 		registerRender(carpet_checkered);

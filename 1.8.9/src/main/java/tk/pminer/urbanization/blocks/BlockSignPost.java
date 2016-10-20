@@ -53,6 +53,16 @@ extends Block
 	@Override
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) 
 	{
-		return super.getItemDropped(state, rand, fortune);
+		return null;
+	}
+	@Override
+	public void onBlockDestroyedByPlayer(World p_onBlockDestroyedByPlayer_1_, BlockPos p_onBlockDestroyedByPlayer_2_, IBlockState p_onBlockDestroyedByPlayer_3_) 
+	{
+		p_onBlockDestroyedByPlayer_1_.destroyBlock(p_onBlockDestroyedByPlayer_2_.up(), true);
+	}
+	@Override
+	public boolean canPlaceBlockAt(World p_canPlaceBlockAt_1_, BlockPos p_canPlaceBlockAt_2_) 
+	{
+		return false;
 	}
 }
